@@ -7,6 +7,9 @@
         t-inherit="mail.Chatter"
         t-inherit-mode="extension"
     >
+        <xpath expr="//SuggestedRecipientsList" position="attributes">
+            <attribute name="styleString">''</attribute>
+        </xpath>
         <xpath
             expr="//button[hasclass('o-mail-Chatter-sendMessage')]"
             position="replace"
@@ -60,6 +63,26 @@
             position="attributes"
         >
             <attribute name="class" remove="pe-2" add="px-0" separator=" " />
+        </xpath>
+        <!-- Align the "Follow" button and text to the left -->
+        <xpath
+            expr="//span[hasclass('o-mail-Chatter-follow')]/../.."
+            position="attributes"
+        >
+            <attribute name="class" add="text-start" separator=" " />
+        </xpath>
+        <xpath expr="//span[hasclass('o-mail-Chatter-follow')]" position="attributes">
+            <attribute name="class" remove="end-0" separator=" " />
+        </xpath>
+        <!-- Align the "Unfollow" button and text to the left -->
+        <xpath expr="//button[hasclass('o-mail-Chatter-follow')]" position="attributes">
+            <attribute name="class" add="text-start" separator=" " />
+        </xpath>
+        <xpath
+            expr="//button[hasclass('o-mail-Chatter-follow')]//span[hasclass('end-0')]"
+            position="attributes"
+        >
+            <attribute name="class" remove="end-0" separator=" " />
         </xpath>
     </t>
 </templates>

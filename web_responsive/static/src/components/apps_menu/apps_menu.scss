@@ -5,8 +5,7 @@
 
 :root {
     .o_grid_apps_menu[data-theme="milk"] {
-        --app-menu-background:
-            url("../../img/home-menu-bg-overlay.svg"),
+        --app-menu-background: url("../../img/home-menu-bg-overlay.svg"),
             linear-gradient(
                 to bottom,
                 #{$app-menu-background-color},
@@ -15,8 +14,7 @@
     }
 
     .o_grid_apps_menu[data-theme="community"] {
-        --app-menu-background:
-            url("../../img/home-menu-bg-overlay.svg"),
+        --app-menu-background: url("../../img/home-menu-bg-overlay.svg"),
             linear-gradient(
                 to bottom,
                 #{$o-brand-primary},
@@ -93,7 +91,6 @@
     // Display apps in a grid
     align-content: flex-start;
     display: flex !important;
-    z-index: 1024 !important;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
